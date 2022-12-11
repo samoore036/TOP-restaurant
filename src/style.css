@@ -1,0 +1,175 @@
+@font-face {
+    font-family: 'Goth';
+    src: url('./fonts/NanumGothic-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Via';
+    src: url('./fonts/ViaodaLibre-Regular.ttf');
+}
+
+* {
+    /* allows space caused by borders, magins, padding to be included in the 100% of width/height */
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Goth';
+}
+
+#content {
+    background-image: url('./images/pasties-background.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-start;
+    align-items: center;
+    gap: 3rem;
+}
+
+#header, .tab-content, .grid-content, #footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgba(255, 255, 255, 1.0);
+}
+
+#header, #footer {
+    width: 100%;
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+#title {
+    padding-top: 0.5rem;
+    font-size: 3.2rem;
+    font-family: 'Via';
+}
+
+#navbar {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 1.0);
+    font-size: 1.2rem;
+    font-family: 'Goth';
+    padding-bottom: 0.5rem;
+}
+
+#footer {
+    padding: 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.9rem;
+}
+
+/* style settings for tab content */
+
+button:hover {
+    cursor: pointer;
+}
+
+.tab-content {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    width: 33rem;
+    animation: fadeIn 0.8s;
+}
+
+.grid-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, minmax(5rem, 7rem));
+    grid-auto-rows: minmax(4rem, 7rem);
+    padding: 2rem;
+    column-gap: 1rem;
+    width: 33rem;
+    min-height: 27rem;
+    animation: fadeIn 0.8s;
+}
+
+.menu-item {
+    max-width: 20rem;
+}
+
+.menu-item header {
+    font-weight: bold;
+    margin-bottom: 0; /* removes gap between header and p */
+}
+
+/* removes gap between header and p */
+.menu-item p {
+    margin-top: 0;
+}
+
+li {
+    list-style: none;
+}
+
+#sentence-list {
+    line-height: 2rem;
+    text-align: center;
+}
+
+#home-img {
+    width: 15rem;
+    height: 12rem;
+}
+
+#miners-img {
+    width: 30rem;
+    height: 17rem;
+}
+
+.current-btn {
+    border-bottom: 2px solid white;
+}
+
+.contact-div {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.contact-div p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: middle;
+}
+
+/* Animation for tab content */
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+
